@@ -22,9 +22,9 @@ public class User {
    private String email;
 
    @OneToOne(
-           fetch = FetchType.LAZY,
+           fetch = FetchType.EAGER,
            optional = false,
-           cascade = {CascadeType.ALL}
+           cascade = CascadeType.ALL
    )
    @JoinColumn(name = "car_id")
    private Car car;
